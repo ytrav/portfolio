@@ -39,7 +39,7 @@ a {
 }
 
 .title {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: white;
     text-align: center;
     padding-top: 15px;
@@ -94,12 +94,12 @@ header {
 .anchor1 {
     text-decoration: none;
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .hey {
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 10px;
     font-size: 200%;
     text-align: center;
@@ -108,9 +108,9 @@ header {
 
 .aboutp {
     color: white;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 20%;
-    margin-right: 20%;
+    font-family: "Roboto", sans-serif;
+    margin-left: 40%;
+    margin-right: 40%;
     margin-top: 4%;
     text-align: center;
 }
@@ -118,13 +118,13 @@ header {
 a.button {
     display: inline-block;
     padding: 0.35em 1.2em;
-    border: 0.1em solid #FFFFFF;
+    border: 0.1em solid #ffffff;
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
     text-align: center;
     transition: all 0.5s;
     margin-left: 40%;
@@ -133,10 +133,10 @@ a.button {
 
 a.button:hover {
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
-@media all and (max-width:30em) {
+@media all and (max-width: 30em) {
     a.button {
         display: block;
         margin: 0.4em auto;
@@ -151,7 +151,7 @@ a.button:hover {
 
 .resumep {
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 4%;
@@ -167,7 +167,7 @@ a.button:hover {
     zoom: 50%;
     margin-top: 4%;
     border-radius: 50%;
-    border: solid 10px white
+    border: solid 10px white;
 }
 
 .text-photo {
@@ -177,9 +177,82 @@ a.button:hover {
     align-items: center;
     flex-direction: column;
 }
+.workp {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 4%;
+    text-align: center;
+}
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 2;
+    flex-grow: 1;
+}
 
-.work {}
+.workimg {
+    zoom: 10%;
+}
 
+.workimg1 {
+    zoom: 15%;
+}
+.workimg2 {
+    zoom: 10%;
+}
+.frame {
+    border: solid 10px white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame2 {
+    border: solid 10px white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame1 {
+    border: solid 10px white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame3 {
+    border: solid 10px white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+}
+.ucode {
+    font-style: italic;
+}
 .push {
     height: 50px;
 }
@@ -197,5 +270,72 @@ footer {
     text-align: center;
     color: rgb(0, 0, 0);
     background-color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+}
+@media screen and (orientation: portrait) {
+    .workimg {
+        zoom: 7%;
+    }
+    .workimg1 {
+        zoom: 9.5%;
+    }
+    .workimg2 {
+        zoom: 6%;
+    }
+    .work-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .frame {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .frame3 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .frame1 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .frame2 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .social {
+        zoom: 6%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 35%;
+        padding-bottom: 15%;
+    }
+    .copyright{
+        box-shadow: 0px -10px 7px rgb(29, 29, 29) inset;
+    padding-bottom: 1.6%;
+        padding-bottom: 6%
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(34, 34, 34);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(80, 80, 80);
 }
