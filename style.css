@@ -320,7 +320,7 @@ footer {
         padding-bottom: 6%
     }
 }
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) {
     .aboutp {
     color: white;
     font-family: "Roboto", sans-serif;
