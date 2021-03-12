@@ -1,349 +1,364 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
+/* that's for the scrolling to be smooth and images not be stolen */
 html,
 body {
-    height: 100%;
-    margin: 0;
-    background-color: rgb(29, 29, 29);
-    scroll-behavior: smooth;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  height: 100%;
+  margin: 0;
+  background-color: rgb(29, 29, 29);
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
+/* that's for links to not stink with their blue color */
 a {
-    color: white;
+  color: white;
 }
-
+/* that's for the div in the bottom (idk why it's in the top of css) that contains social links like insta, telegram etc */
 .socials {
-    background-color: white;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.6%;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 10px 7px rgb(29, 29, 29) inset;
+}
+/* that's for the fake copyright text in the bottom */
+.copyright {
+  box-shadow: 0px -10px 7px rgb(29, 29, 29) inset;
+  padding-bottom: 1.6%;
+}
+/* that's for images in socials to not be huge */
+.social {
+  zoom: 10%;
+  padding: 10%;
+}
+/* that's for the navbar to look shiny and stuff */
+.title {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  font-size: 2em;
+  position: fixed;
+  background-color: rgba(49, 49, 49, 0.952);
+  width: 100%;
+  text-shadow: 0 0 0px;
+  transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
+}
+/* that's for when you hover the cursor over the navbar */
+.title:hover {
+  font-size: 2.1em;
+  text-shadow: 0 0 5px rgb(138, 138, 138);
+  transition: font-size 0.5s ease-out, text-shadow 0.5 ease-out;
+}
+/* that's for the header to work as it does now */
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  top: 0;
+  z-index: 100;
+}
+/* that's for the anchors in the navbar to be placed correctly */
+.anchors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  margin-top: 55px;
+}
+/* that's for the anchor itself to look cool */
+.anchor {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  text-shadow: 0 0 0px;
+  transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
+}
+/* that's also for anchor but when you hover */
+.anchor:hover {
+  font-size: 1.1em;
+  text-shadow: 0 0 4px rgb(138, 138, 138);
+  transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
+}
+/* that's for the links in the anchors to look good */
+.anchor1 {
+  text-decoration: none;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* that's for the anchors to work in the top of the page */
+.upper-push {
+  margin: 10px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+/* that was at first used only for the 'Hey there!' text but then
+I applied it to all of the headlines.. yet it's still works using <p> */
+.hey {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold;
+}
+/* that's for the text about me */
+.aboutp {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 4%;
+  text-align: center;
+}
+/* that's for the button that downloads the cv
+(not really cuz i haven't made it yet) to look shiny */
+a.button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.5s;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+/* that's for whn you hover over the button */
+a.button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+/* that's a media request for the button to appear
+correctly on some devices or idk */
+@media all and (max-width: 30em) {
+  a.button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+/* that's for the resume <div> */
+.resume {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* that's for the text about my resume */
+.resumep {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4%;
+  text-align: center;
+}
+/* that's the stuff used to stick the footer to the bottom of the page */
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+/* that's for my photo */
+.mypic {
+  zoom: 50%;
+  margin-top: 4%;
+  border-radius: 50%;
+  border: solid 10px white;
+}
+/* that's for the div with my photo and welcoming text */
+.text-photo {
+  display: flex;
+  flex-shrink: 1;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+}
+/* that's for the text in the 'work' category */
+.workp {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4%;
+  text-align: center;
+  font-size: 200%;
+}
+/* that's for the container of pictures of my work */
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-shrink: 2;
+  flex-grow: 1;
+}
+/* that's for the picture of my work */
+.workimg {
+  zoom: 10%;
+}
+/* that's .. for the other one  */
+.workimg1 {
+  zoom: 15%;
+}
+/* and the other one
+THAT'S NOT MY FAULT THERE'S NO PHOTO EDITOR ON THIS MAC
+SO IMAGES ARE DIFFERENT RESOLUTIONS AND I HAD
+TO RESCALE EACH ONE MANUALLY */
+.workimg2 {
+  zoom: 10%;
+}
+/* that's for the frame of the picture */
+.frame {
+  border: solid 10px white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* also for the frame cause i explained why */
+.frame2 {
+  border: solid 10px white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* and also for the frame */
+.frame1 {
+  border: solid 10px white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ..frame */
+.frame3 {
+  border: solid 10px white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3.5%;
+  padding-bottom: 3.5%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+}
+/* that's also used to make footer work */
+.push {
+  height: 50px;
+}
+/* that's so you dont steal my pictures */
+img {
+  user-zoom: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+/* that's for the footer */
+footer {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* this media request is used to make pictures of my work look instagram-like on mobile devices like phones
+designed completely by myself, trademark!! yes i know it's crap but it's something */
+@media screen and (orientation: portrait) {
+  .workimg {
+    zoom: 7%;
+  }
+  .workimg1 {
+    zoom: 9.5%;
+  }
+  .workimg2 {
+    zoom: 6%;
+  }
+  .work-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 1.6%;
+    flex-direction: row;
+  }
+  .frame {
+    width: 80%;
+    display: flex;
     justify-content: center;
-    position: relative;
-    box-shadow: 0px 10px 7px rgb(29, 29, 29) inset;
-}
-
-.copyright {
+  }
+  .frame3 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .frame1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .frame2 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .social {
+    zoom: 6%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 35%;
+    padding-bottom: 15%;
+  }
+  .copyright {
     box-shadow: 0px -10px 7px rgb(29, 29, 29) inset;
     padding-bottom: 1.6%;
+    padding-bottom: 6%;
+  }
+  .hey {
+    max-width: 80%;
+  }
 }
-
-.social {
-    zoom: 10%;
-    padding: 10%;
-}
-
-.title {
-    font-family: "Source Sans Pro", sans-serif;
-    color: white;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 40px;
-    font-size: 2em;
-    position: fixed;
-    background-color: rgba(49, 49, 49, 0.952);
-    width: 100%;
-    text-shadow: 0 0 0px;
-    transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
-}
-
-.title:hover {
-    font-size: 2.1em;
-    text-shadow: 0 0 5px rgb(138, 138, 138);
-    transition: font-size 0.5s ease-out, text-shadow 0.5 ease-out;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: white;
-    top: 0;
-    z-index: 100;
-}
-
-.anchors {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: fixed;
-    margin-top: 55px;
-}
-
-.anchor {
-    margin: 0 10px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1em;
-    text-shadow: 0 0 0px;
-    transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
-}
-
-.anchor:hover {
-    font-size: 1.1em;
-    text-shadow: 0 0 4px rgb(138, 138, 138);
-    transition: font-size 0.5s ease-out, text-shadow 0.5s ease-out;
-}
-
-.anchor1 {
-    text-decoration: none;
-    color: white;
-    font-family: "Source Sans Pro", sans-serif;
-}
-
-.hey {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    margin: 10px;
-    font-size: 200%;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.aboutp {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    max-width: 50%;
-    text-align: center;
-}
-
-a.button {
-    display: inline-block;
-    padding: 0.35em 1.2em;
-    border: 0.1em solid #ffffff;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    color: #ffffff;
-    text-align: center;
-    transition: all 0.5s;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-a.button:hover {
-    color: #000000;
-    background-color: #ffffff;
-}
-
-@media all and (max-width: 30em) {
-    a.button {
-        display: block;
-        margin: 0.4em auto;
-    }
-}
-
-.resume {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.resumep {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 4%;
-    text-align: center;
-}
-
-.wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-.mypic {
-    zoom: 50%;
-    margin-top: 4%;
-    border-radius: 50%;
-    border: solid 10px white;
-}
-
-.text-photo {
-    display: flex;
-    flex-shrink: 1;
-    justify-content: baseline;
-    align-items: center;
-    flex-direction: column;
-}
-.workp {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 4%;
-    text-align: center;
-}
-.work-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-shrink: 2;
-    flex-grow: 1;
-}
-
-.workimg {
-    zoom: 10%;
-}
-
-.workimg1 {
-    zoom: 15%;
-}
-.workimg2 {
-    zoom: 10%;
-}
-.frame {
-    border: solid 10px white;
-    border-radius: 15px;
-    background-color: white;
-    margin: 1%;
-    padding: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.frame2 {
-    border: solid 10px white;
-    border-radius: 15px;
-    background-color: white;
-    margin: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.frame1 {
-    border: solid 10px white;
-    border-radius: 15px;
-    background-color: white;
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.frame3 {
-    border: solid 10px white;
-    border-radius: 15px;
-    background-color: white;
-    margin: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
-    display: flex;
-    justify-content: center;
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-items: center;
-}
-.ucode {
-    font-style: italic;
-}
-.push {
-    height: 50px;
-}
-
-img {
-    user-zoom: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-footer {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    font-family: "Source Sans Pro", sans-serif;
-}
-@media screen and (orientation: portrait) {
-    .workimg {
-        zoom: 7%;
-    }
-    .workimg1 {
-        zoom: 9.5%;
-    }
-    .workimg2 {
-        zoom: 6%;
-    }
-    .work-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .frame {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
-    .frame3 {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
-    .frame1 {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
-    .frame2 {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
-    .social {
-        zoom: 8%;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 35%;
-        padding-bottom: 15%;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-    .copyright{
-        box-shadow: 0px -10px 7px rgb(29, 29, 29) inset;
-    padding-bottom: 1.6%;
-        padding-bottom: 6%
-    }
-}
-@media screen and (orientation: landscape) {
-    .aboutp {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    max-width: 24%;
-    text-align: center;
-}
-}
-/* width */
+/* this is the custom scrollbar i implemented */
+/* width of the custom scrollbar */
 ::-webkit-scrollbar {
-    width: 15px;
+  width: 15px;
 }
 
-/* Track */
+/* Track of it */
 ::-webkit-scrollbar-track {
-    background: rgb(34, 34, 34);
+  background: rgb(34, 34, 34);
 }
 
-/* Handle */
+/* its handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(100, 100, 100);
+  background: rgb(100, 100, 100);
 }
 
-/* Handle on hover */
+/* its handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(80, 80, 80);
+  background: rgb(80, 80, 80);
 }
