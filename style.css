@@ -337,9 +337,15 @@ designed completely by myself, trademark!! yes i know it's crap but it's somethi
     box-shadow: 0px -10px 7px rgb(29, 29, 29) inset;
     padding-bottom: 1.6%;
     padding-bottom: 6%;
+    
   }
-  .hey {
-    max-width: 80%;
+  .aboutp {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    text-align: center;
   }
 }
 /* this is the custom scrollbar i implemented */
